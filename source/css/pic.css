@@ -1,0 +1,54 @@
+A IMG {
+	BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+#mainarea {
+	FLOAT: left; OVERFLOW: hidden; WIDTH: 300px
+}
+#pic_box {
+	MARGIN: 0px auto; OVERFLOW: hidden; WIDTH: 250px; HEIGHT: 104px
+}
+#pic_box A {
+	FLOAT:left;
+}
+/*上下横线*/
+#case_wrapper .bot {
+	BORDER-TOP: #eee 1px solid
+}
+#case_wrapper .bob {
+	BORDER-BOTTOM: #eee 1px solid
+}
+/*_____________________________________________*/
+/*padding间距及按钮效果*/
+#case_pic_pre {
+	 PADDING-BOTTOM: 10px; PADDING-TOP: 10px; 
+}
+#go_left {
+	BACKGROUND: url(case_sprites.gif) no-repeat ; FLOAT: left; WIDTH: 20px; CURSOR: pointer; HEIGHT: 104px
+}
+#go_right {
+	BACKGROUND: url(case_sprites.gif) no-repeat -60px 0px ; FLOAT: right; WIDTH: 20px; CURSOR: pointer; HEIGHT: 104px
+}
+#case_pic_pre .left_active {
+	BACKGROUND: url(case_sprites.gif) no-repeat -20px 0px ;
+}
+#case_pic_pre .right_active {
+	BACKGROUND: url(case_sprites.gif) no-repeat -40px 0px;
+}
+/*_____________________________________________*/
+/*鼠标经过效果——图片*/
+
+
+.case_pic_pre A:visited {
+	BORDER: #fff 2px solid; DISPLAY: inline-block; HEIGHT: 100px;WIDTH: 100px;
+}
+
+#case_pic_pre A:hover {
+	BORDER: #666 1px solid; PADDING: 1px;
+}
+#case_pic_pre A:link {
+	BORDER:#fff 1px solid; PADDING: 1px;
+}
+#case_pic_pre A:visited {
+	BORDER: #fff 1px solid; PADDING: 1px;
+}
+/*_____________________________________________*/

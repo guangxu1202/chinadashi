@@ -1,0 +1,216 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!--
+ * FCKeditor - The text editor for Internet - http://www.fckeditor.net
+ * Copyright (C) 2003-2007 Frederico Caldeira Knabben
+ * alipay Plugin.
+-->
+<html>
+	<head>
+		<title>alipay Properties</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta content="noindex, nofollow" name="robots">
+		<script language="javascript">
+			var s_alipay_email = "@";
+			var s_alipay_name = "";
+			var s_alipay_money = "";
+			var s_alipay_transport = "";
+			var s_alipay_mail = "";
+			var s_alipay_express = "";
+			var s_alipay_message = "";
+			var s_alipay_ww = "";
+			var s_alipay_qq = "";
+			var s_alipay_demo = "";
+			var oEditor = window.parent.InnerDialogLoaded() ;
+			var FCKLang = oEditor.FCKLang ;
+			var FCKalipays = oEditor.FCKalipays ;
+			window.onload = function ()
+			{
+				// First of all, translate the dialog box texts
+				oEditor.FCKLanguageManager.TranslatePage( document ) ;
+				LoadSelected() ;
+				// Show the "Ok" button.
+				window.parent.SetOkButton( true ) ;
+			}
+			var eSelected = oEditor.FCKSelection.GetSelectedElement() ;
+			function LoadSelected()
+			{
+				if ( !eSelected )
+					return ;
+				if ( eSelected.tagName == 'SPAN' && eSelected._fckalipay )
+					document.getElementById('txtName').value = eSelected._fckalipay ;
+				else
+					eSelected == null ;
+			}
+			// 转为数字型，并无前导0，不能转则返回""
+			function ToInt(str){
+				str=BaseTrim(str);
+				if (str!=""){
+					var sTemp=parseFloat(str);
+					if (isNaN(sTemp)){
+						str="";
+					}else{
+						str=sTemp;
+					}
+				}
+				return str;
+			}
+			// 去空格，left,right,all可选
+			function BaseTrim(str){
+				  lIdx=0;rIdx=str.length;
+				  if (BaseTrim.arguments.length==2)
+					act=BaseTrim.arguments[1].toLowerCase()
+				  else
+					act="all"
+				  for(var i=0;i<str.length;i++){
+					thelStr=str.substring(lIdx,lIdx+1)
+					therStr=str.substring(rIdx,rIdx-1)
+					if ((act=="all" || act=="left") && thelStr==" "){
+						lIdx++
+					}
+					if ((act=="all" || act=="right") && therStr==" "){
+						rIdx--
+					}
+				  }
+				  str=str.slice(lIdx,rIdx)
+				  return str
+			}
+			function Ok()
+			{
+				alipay_money.value = ToInt(alipay_money.value);
+				alipay_mail.value = ToInt(alipay_mail.value);
+				alipay_express.value = ToInt(alipay_express.value);
+				alipay_qq.value = ToInt(alipay_qq.value);
+				s_alipay_email = alipay_email.value;
+				s_alipay_name = alipay_name.value;
+				s_alipay_money = alipay_money.value;
+				s_alipay_transport = alipay_transport.value;
+				s_alipay_mail = alipay_mail.value;
+				s_alipay_express = alipay_express.value;
+				s_alipay_message = alipay_message.value;
+				s_alipay_qq = alipay_qq.value;
+				s_alipay_demo = alipay_demo.value;
+				var sHTML = '[payto]';
+				sHTML=sHTML+'(seller)'+s_alipay_email+'(/seller)';
+				sHTML=sHTML+'(subject)'+s_alipay_name+'(/subject)';
+				sHTML=sHTML+'(body)'+s_alipay_message+'(/body)';
+				sHTML=sHTML+'(price)'+s_alipay_money+'(/price)';
+				sHTML=sHTML+'(transport)'+s_alipay_transport+'(/transport)';
+				sHTML=sHTML+'(ordinary_fee)'+s_alipay_mail+'(/ordinary_fee)';
+				sHTML=sHTML+'(express_fee)'+s_alipay_express+'(/express_fee)';
+				//sHTML=sHTML+'(key)'+alipay_key.value+'(/key)';
+				if (s_alipay_qq!=""){
+					sHTML=sHTML+'(qq)'+s_alipay_qq+'(/qq)';
+				}
+				if (s_alipay_demo!="" && s_alipay_demo!="http://"){
+					sHTML=sHTML+'(demo)'+s_alipay_demo+'(/demo)';
+				}
+				sHTML=sHTML+'[/payto]';
+				FCKalipays.Add( sHTML ) ;
+				return true ;
+			}
+		</script>
+	</head>
+	<body scroll="no" style="OVERFLOW: hidden">
+		<table height="100%" cellSpacing="0" cellPadding="0" width="100%" border="0">
+			<tr>
+				<td>
+					<table border=0 cellpadding=0 cellspacing=0 align=center width="97%">
+					<tr>
+					<td>
+						<fieldset>
+						<legend><span fckLang="alipayDlgName"></span></legend>
+						<table border=0 cellpadding=2 cellspacing=0 width="100%">
+							<tr><td colspan=5 height=5></td></tr>
+							<tr>
+								<td width=5></td>
+								<td width=70 align=right><span fckLang="alipayDlgNameto"></span></td>
+								<td width=5></td>
+								<td width="*"><input type=text ID="alipay_email" style="width:170px" size=25 value="#"></td>
+								<td width=5></td>
+							</tr>
+							<tr>
+								<td width=5></td>
+								<td width=70 align=right><span fckLang="alipayDlgName"></span></td>
+								<td width=5></td>
+								<td width="*"><input type=text ID="alipay_name" style="width:170px" size=25></td>
+								<td width=5></td>
+							</tr>
+							<tr>
+								<td width=5></td>
+								<td width=70 align=right><span fckLang="alipayDlgNamepacis"></span></td>
+								<td width=5></td>
+								<td width="*"><input type=text ID="alipay_money" style="width:45px" size=25 value="0"><span fckLang="alipaynum"></span> </td>
+								<td width=5></td>
+							</tr>
+							<tr>
+								<td width=5></td>
+								<td width=70 align=right valign="top"><span fckLang="alipaybody"></span></td>
+								<td width=5></td>
+								<td width="*">
+								<input type=radio ID="ialipay_transport" name="ialipay_transport" value="3" onclick="document.getElementById('alipay_mail').disabled=true; document.getElementById('alipay_express').disabled=true;alipay_transport.value=3;"> <span fckLang="alipaybody1"></span><BR>
+								<input type=radio ID="ialipay_transport" name="ialipay_transport" checked value="1" onclick="document.getElementById('alipay_mail').disabled=true; document.getElementById('alipay_express').disabled=true;alipay_transport.value=1;"> <span fckLang="alipaybody2"></span><BR>
+								<input type=radio ID="ialipay_transport" name="ialipay_transport" value="2" onclick="document.getElementById('alipay_mail').disabled=false; document.getElementById('alipay_express').disabled=false;alipay_transport.value=2;"> <span fckLang="alipaybody3"></span><BR>
+								<input type="hidden" value="1" ID="alipay_transport">
+								<input type=text ID="alipay_mail" name="alipay_mail" style="width:45px" size=25 disabled> <span fckLang="alipaybody4"></span><BR>
+								<input type=text ID="alipay_express" name="alipay_express" style="width:45px" size=25 disabled> <span fckLang="alipaybody5"></span>
+								</td>
+								<td width=5></td>
+							</tr>
+							<tr>
+								<td width=5></td>
+								<td width=70 align=right valign=top><span fckLang="alipayinfo"></span></td>
+								<td width=5></td>
+								<td width="*"><textarea rows="5" ID="alipay_message" style="width: 170px; word-break: break-all" tabindex="4"></textarea></td>
+								<td width=5></td>
+							</tr>
+							<tr><td colspan=5 height=5></td></tr>
+						</table>
+						</fieldset>
+						</td>
+					</tr>
+					<tr><td height=5></td></tr>
+					<tr>
+						<td>
+						<fieldset>
+						<legend><span fckLang="alipayinfoall"></span></legend>
+						<table border=0 cellpadding=2 cellspacing=0 width="100%">
+							<tr><td colspan=5 height=5></td></tr>
+							<tr>
+								<td width=5></td>
+								<td width=70 align=right valign=top><span fckLang="alipayinfourl"></span></td>
+								<td width=5></td>
+								<td width="*"><input type=text ID="alipay_demo" style="width:170px" size=25 value="http://"></td>
+								<td width=5></td>
+							</tr>
+							<tr>
+								<td width=5></td>
+								<td width=70 align=right valign=top><span fckLang="alipayinfoqq"></span></td>
+								<td width=5></td>
+								<td width="*"><input type=text ID="alipay_qq" style="width:80px" size=25> <span fckLang="alipayinfoqqnum"></span></td>
+								<td width=5></td>
+							</tr>
+							<tr><td colspan=5 height=5></td></tr>
+						</table>
+						</fieldset>
+						</td>
+					</tr>
+					<tr>
+						<td>
+						<fieldset>
+						<legend><span fckLang="alipayabout"></span></legend>
+						<table border=0 cellpadding=2 cellspacing=0 width="100%">
+							<tr><td height=3></td></tr>
+							<tr><td>
+							<span fckLang="alipayaboutinfo"></span>
+							</td></tr>
+							<tr><td height=3></td></tr>
+						</table>
+						</fieldset>
+						</td>
+					</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

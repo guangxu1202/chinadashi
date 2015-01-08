@@ -1,0 +1,16 @@
+html {
+	overflow-x: auto;
+}
+body {
+	margin: 0px;
+	padding: 2px;
+	background-image: url(frame_bg.gif);
+	background-attachment: fixed;
+	background-position: right;
+	background-repeat: repeat-y;
+	font: 12px Tahoma, Verdana; color : #000000;
+}
+a {text-decoration : none;color : #000; } 
+a:hover {text-decoration : underline; color : #000; } 
+
+.treeclass {width:150px;padding: 5px; overflow:hidden;word-break:break-all;}

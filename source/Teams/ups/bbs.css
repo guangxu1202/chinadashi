@@ -1,0 +1,17 @@
+/*∞Ê±æ : TEAM BBS / ±‡–¥ : DayMoon*/
+* { word-break: break-all; }
+a {text-decoration : none;color : #282827; }
+a:hover {text-decoration : none; color : #4455aa; } 
+body {font: 12px Tahoma, Verdana; color : #818598; text-align : center; margin : 0;background:#6d8ba5 ; }
+table,h3,li,ul{font:12px Tahoma, Verdana;}
+input, select, textarea {font: 12px Tahoma, Verdana; color: #333333; font-weight: normal; background: #F5FBFF;  border: 1px solid #7AC4EA; height: 21px;}
+img {border:0;}
+
+.a1,.a1 a,.a1 a:hover{ font: 12px Tahoma, Verdana;text-align: left;color: #fff;background:#818598;font-weight: bold;padding:5px;}
+.a2{ background: #F8F8F8;border: 1px solid #818598;text-align: left;} 
+.a3{ background: #e7e4e4;text-align: left;}
+.a4{ background: #fff; COLOR: #282827; text-align: left;}
+.a5{ border: 1px solid #FF6600; color: #fff; text-align: left;}
+.a6{ text-align: center;background: #dddce4;}
+.a7{ text-align: center;}
+.a8,.a8 a,.a8 a:hover{ color:#fff;}

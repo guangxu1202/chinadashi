@@ -1,0 +1,42 @@
+/*admin gloub css begin*/
+.STYLE4 {color: #003300}
+.STYLE3 {color: #000000}
+html, body, div, span,applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dd, dl, dt, li, ol, ul, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {margin:0;padding:0;}
+html,body{background:#FFFFFF;}
+body{font:normal normal normal 12px/1.5em Simsun,Arial, "Arial Unicode MS", Mingliu, Helvetica;text-align: inherit;height:100%;word-break : break-all;}
+A {
+	TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #FFCC00;
+}
+.tag{	
+	color:#C7000C;
+}
+.leftline{
+	border-left:1px solid #CCCCCC;
+}
+
+.leftk{
+	border:1px solid #CCCCCC;
+	padding-left:3px;
+	line-height:1.6em;
+}
+.bxline{
+	border-left:1px solid #BFBFBF;
+	border-right:1px solid #BFBFBF;
+}
+a {
+	color:#000000;
+}
+a:link{
+	color:#000000;
+	text-decoration:none;
+}
+a:hover{
+	color:#FF0033;
+	text-decoration:none;
+}
+object{
+	float:right;
+}

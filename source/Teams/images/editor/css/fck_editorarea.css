@@ -1,0 +1,68 @@
+/*
+ * FCKeditor - The text editor for Internet - http://www.fckeditor.net
+ * Copyright (C) 2003-2007 Frederico Caldeira Knabben
+ * The "body" styles should match your editor web site, mainly regarding
+ * background color and font family and size.
+*/
+
+body
+{
+	background-color: #ffffff;
+	padding: 5px 5px 5px 5px;
+	margin: 0px;
+}
+
+body, td
+{
+	font-family: Arial, Verdana, Sans-Serif;
+	font-size: 12px;
+}
+
+a[href]
+{
+	color: #0000FF !important;	/* For Firefox... mark as important, otherwise it becomes black */
+}
+
+/*
+	Just uncomment the following block if you want to avoid spaces between
+	paragraphs. Remember to apply the same style in your output front end page.
+*/
+
+/*
+p, ul, li
+{
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+*/
+
+/*
+    The following are some sample styles used in the "Styles" toolbar command.
+    You should instead remove them, and include the styles used by the site
+    you are using the editor in.
+*/
+
+.Bold
+{
+	font-weight: bold;
+}
+
+.Title
+{
+	font-weight: bold;
+	font-size: 18px;
+	color: #cc3300;
+}
+
+.Code
+{
+	border-left: #8b4513 6px solid;
+	border-top: #8b4513 1px solid;
+	border-right: #8b4513 1px solid;
+	border-bottom: #8b4513 1px solid;
+	padding: 5px;
+	margin:5px 20px;
+	color: #000066;
+	font-family: 'Courier New' , Monospace;
+	background-color: #ff9933;
+}

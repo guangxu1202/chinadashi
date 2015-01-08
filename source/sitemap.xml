@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="gb2312"?>
+<sitemap>
+	<group>
+		<name>大实集团引导页</name>
+		<url>http://www.chinadashi.com/</url>
+	</group>
+	<group>
+		<name>大实集团首页</name>
+		<url>http://www.chinadashi.com/default.asp</url>
+	</group>
+	<group>
+		<name>新闻中心</name>
+		<url>http://www.chinadashi.com/news.asp</url>
+	</group>
+	<group>
+		<name>关于大实</name>
+		<url>http://www.chinadashi.com/about.asp</url>
+	</group>
+	<group>
+		<name>大实产业</name>
+		<url>http://www.chinadashi.com/estate.asp</url>
+	</group>
+	<group>
+		<name>加入大实</name>
+		<url>http://www.chinadashi.com/join.asp</url>
+	</group>
+	<group>
+		<name>联系大实</name>
+		<url>http://www.chinadashi.com/contact.asp</url>
+	</group>
+</sitemap>
